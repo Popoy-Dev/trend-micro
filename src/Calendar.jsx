@@ -58,7 +58,7 @@ const Calendar = ({ onhandleSelectDate }) => {
 
     for (let i = 1; i > 0; i--) {
       days.push(
-        <div key={`prev-${i}`} className='day inactive'>
+        <div key={`prev-${i}`} className='day inactiveDay'>
           {getDaysInMonth(year, month - 1) - i + 1}
         </div>
       )
@@ -86,7 +86,7 @@ const Calendar = ({ onhandleSelectDate }) => {
     const remainingDays = 42 - days.length
     for (let i = 1; i <= remainingDays; i++) {
       days.push(
-        <div key={`next-${i}`} className='day inactive'>
+        <div key={`next-${i}`} className='day inactiveDay'>
           {i}
         </div>
       )
